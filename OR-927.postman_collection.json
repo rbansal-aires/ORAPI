@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "47f7e779-570a-41e7-aa43-d6188f384205",
+		"name": "OR-927",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"filePath\": [\r\n       \"/appsadm/feed/Netflix/toAires/authformUpload/Netflix_Aires_Companies_r1_decrypt_2021_10_22.xml\"\r\n       ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/netflixfeedparse-api/parse/xml/",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"netflixfeedparse-api",
+						"parse",
+						"xml",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"filePath\": [\r\n       \"/appsadm/feed/Netflix/toAires/authformUpload/Netflix_Aires_CostCenters_r1_decrypt_2021_10_22.xml\"\r\n       ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/netflixfeedparse-api/parse/xml/",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"netflixfeedparse-api",
+						"parse",
+						"xml",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"filePath\": [\r\n       \"/appsadm/feed/Netflix/toAires/authformUpload/Netflix_Aires_Locations_r1_decrypt_2021_10_22.xml\"\r\n       ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/netflixfeedparse-api/parse/xml/",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"netflixfeedparse-api",
+						"parse",
+						"xml",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n   \"filePath\": [\r\n       \"/appsadm/feed/Netflix/toAires/authformUpload/Netflix_Aires_Regions_r1_decrypt_2021_10_22.xml\"\r\n       ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/netflixfeedparse-api/parse/xml/",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"netflixfeedparse-api",
+						"parse",
+						"xml",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
