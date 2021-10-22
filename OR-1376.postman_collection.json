@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "450d0736-e0eb-4ba1-bf1a-7e6b8a0bf957",
+		"name": "OR-1376",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"301\",\r\n  \"manualProcessInd\": \"N\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"2021-09-20\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"\",\r\n  \"manualProcessInd\": \"N\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"2021-09-20\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": null,\r\n  \"manualProcessInd\": \"N\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"2021-09-20\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"1\",\r\n  \"manualProcessInd\": \"N\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"1\",\r\n  \"manualProcessInd\": \"X\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"2021-09-20\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"1\",\r\n  \"manualProcessInd\": \"N\",\r\n  \"asyncCallToTransformServiceInd\": \"X\",\r\n  \"startDate\": \"2021-09-20\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC7",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"1\",\r\n  \"manualProcessInd\": \"Y\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"\",\r\n  \"endDate\": \"2021-09-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numberOfDays\": \"1\",\r\n  \"manualProcessInd\": \"Y\",\r\n  \"asyncCallToTransformServiceInd\": \"Y\",\r\n  \"startDate\": \"2021-09-20\",\r\n  \"endDate\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/update",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
