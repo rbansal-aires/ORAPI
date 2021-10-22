@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "402ec8b4-7abb-4a8f-870c-df662e3c1cf8",
+		"name": "OR-1346",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"jsonParseServiceRequestObjectList\": [\r\n{\r\n                                \"authFormConfigId\": \"10\",\r\n                                \"businessUnit\": \"Health\",\r\n                                \"clientConfigId\": \"9\",\r\n                                \"clientId\": \"97338\",\r\n                                \"comments\": \"nothing\",\r\n                                \"costCenter\": \"Finance FP&A\",\r\n                                \"department\": \"Finance\",\r\n                                \"destCity\": \"Salt Lake City\",\r\n                                \"destCountry\": \"US\",\r\n                                \"employeeId\": \"911921\",\r\n                                \"firstName\": \"Jonty\",\r\n                                \"jobTitle\": \"Finance Analyst- FP&A\",\r\n                                \"lastName\": \"RhodesSix\",\r\n                                \"miscValue1\": \"RB Corp - Health - AMET - GBP\",\r\n                                \"miscValue10\": \"A\",\r\n                                \"miscValue11\": \"Single\",\r\n                                \"miscValue12\": \"CA\",\r\n                                \"miscValue13\": \"USA, Salt Lake City, Utah\",\r\n                                \"miscValue14\": \"PERM\",\r\n                                \"miscValue16\": \"Deloitte\",\r\n                                \"miscValue2\": \"No\",\r\n                                \"miscValue3\": \"North America\",\r\n                                \"miscValue38\": \"1992-12-23\",\r\n                                \"miscValue39\": \"SGD\",\r\n                                \"miscValue4\": \"Yes\",\r\n                                \"miscValue42\": \"2021-08-16\",\r\n                                \"miscValue43\": \"711120\",\r\n                                \"miscValue5\": \"RB Health Manufacturing US LLC (US43)\",\r\n                                \"miscValue6\": \".com\",\r\n                                \"miscValue7\": \"MM\",\r\n                                \"miscValue8\": \"0\",\r\n                                \"miscValue9\": \"Singapore, Singapore\",\r\n                                \"originCountry\": \"SG\",\r\n                                \"relocationPolicy\": \"IA Expat-RB GBP\",\r\n                                \"salary\": \"165000\",\r\n                                \"transfereeType\": \"TRANSFER\",\r\n                                \"vipInd\": \"N\",\r\n                                \"workEmail\": \"air@yopmail.com\"\r\n                }],\r\n\"asyncCallToTransformServiceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/fileparse-api/parse/json/async/list",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"fileparse-api",
+						"parse",
+						"json",
+						"async",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tc2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"jsonParseServiceRequestObjectList\": [\r\n    {\r\n \"clientId\": \"37647\",\r\n \"authorizationId\": \"\",\r\n \"clientConfigId\": \"7\",\r\n \"authFormConfigId\": \"5\",\r\n \"firstName\": \"Test\",\r\n \"lastName\": \"DependentSix\",\r\n \"middleName\": \"No middleName\",\r\n \"maidenName\": \"No maidenName\",\r\n \"relocationPolicy\": \"North America Renter Relocation Policy\",\r\n \"gender\":\"Male\",\r\n \"prefix\": \"test prefix\",\r\n \"suffix\": \"test suffix\",\r\n \"transfereeType\": \"PERM\",\r\n \"title\": \"test title\",\r\n \"jobTitle\": \"test jobTitle\",\r\n \"citizenship\": \"UK\",\r\n \"originEmail\": \"original@domain.com\",\r\n \"destEmail\": \"dest@domain.com\",\r\n \"personalEmail\": \"personal@domain.com\",\r\n \"workEmail\": \"work@domain.com\",\r\n \"transfereeReceiveEmailInd\": \"transfree@domain.com\",\r\n \"comments\": \"test comment\",\r\n \"authorizationDate\": \"2024-10-20T00:00:00\",\r\n \"originStreet1\": \"test street\",\r\n \"originStreet2\": \"test street\",\r\n \"originCity\":\"10332 Brunston Rd. Fort Worth\",\r\n \"originState\":\"OH\",\r\n \"originZip\": \"12369\",\r\n \"originCountry\": \"INDIA\",\r\n \"destCity\":\"1301 Westlake Solana Blvd Pittsburgh\",\r\n \"destState\":\"PA\",\r\n \"destCountry\":\"Canada\",\r\n \"originProvince\": \"test origin province\",\r\n \"destStreet1\": \"2\",\r\n \"destStreet2\": \"5\",\r\n \"destProvince\": \"test province\",\r\n \"destZip\": \"132564\",\r\n \"homeStatus\": \"OWN\",\r\n \"originPhone\": \"+1122 52582\",\r\n \"destPhone\": \"+1122 52582\",\r\n \"workPhone\": \"+1122 52582\",\r\n \"mobilePhone\": \"+11 7852 9632\",\r\n \"faxNumber\": \"+11 963963901\",\r\n \"relocationDate\": \"2021-03-05T00:00:00\",\r\n \"authorizerFirstName\": \"test authorizer FName\",\r\n \"authorizerLastName\": \"test authorizer LName\",\r\n \"authorizerEmail\": \"Tester Six\",\r\n \"jobGrade\": \"test grade\",\r\n \"spouseFirstName\": \"test spouse FName\",\r\n \"spouseLastName\": \"test spouse LName\",\r\n \"spouseMiddleName\": \"test middleName\",\r\n \"spouseMaidenName\": \"test maidenName\",\r\n \"spousePrefix\": \"test prefix\",\r\n \"spouseSuffix\": \"test suffix\",\r\n \"spouseGender\": \"F\",\r\n \"spouseRelation\": \"MOM\",\r\n \"spouseContact\": \"+11 78589 852\",\r\n \"spouseEmail\": \"test@domain.com\",\r\n \"spouseCitizenship\": \"US\",\r\n \"spouseReceiveEmailInd\": \"Y\",\r\n \"familyComments\": \"test family comment\",\r\n \"employeeId\": \"11632\",\r\n \"division\": \"Training\",\r\n \"department\": \"test department\",\r\n \"costCenter\": \"test center\",\r\n \"companyCode\": \"9874\",\r\n \"payrollFeedNumber\": \"741478\",\r\n \"poNumber\": \"125478\",\r\n \"lineCode\": \"12654\",\r\n \"businessUnit\": \"test unit\",\r\n \"divisionCode\": \"124521\",\r\n \"region\": \"A la Carte\",\r\n \"budget\": \"5200\",\r\n \"glNum\": \"525\",\r\n \"agentRefNum\": \"112\",\r\n \"entityNo\": \"5\",\r\n \"authStage\": \"test stage\",\r\n \"salary\": \"1600\",\r\n \"payRoll\": \"test payRoll\",\r\n \"projectNum\": \"12453\",\r\n \"miscValue3\": \"hrContactId\",\r\n \"miscValue4\": \"hrContactName\",\r\n \"miscValue5\": \"hrContactEmail@email.com\",\r\n \"miscValue6\": \"9999999999\",\r\n \"miscValue7\": \"01204352716\",\r\n \"miscValue8\": \"Married\",\r\n \"miscValue9\": \"eeMailingAddrInfo\",\r\n \"miscValue10\": \"eeSecondaryCitizenship\",\r\n \"miscValue11\": \"eePassportInfo\",\r\n \"miscValue12\": \"servicesAuthorized\",\r\n \"miscValue13\": \"Nokia of America Corp. (US20)\",\r\n \"miscValue14\": \"fromCostCenter\",\r\n \"miscValue15\": \"hostFamilySize\",\r\n \"miscValue16\": \"homeFamilySize\",\r\n \"miscValue17\": \"dependentRelation\",\r\n \"miscValue18\": \"dependentGender\",\r\n \"miscValue19\": \"dependentAssignmentStatus\",\r\n \"miscValue20\": \"dependentPassportInformation\",\r\n \"miscValue21\": \"spousePrefix\",\r\n \"miscValue22\": \"US\",\r\n \"miscValue23\": \"2000-10-18T00:00:00\",\r\n \"miscValue24\": \"spouseAssignmentStatus\",\r\n \"miscValue25\": \"spousePassportInformation\",\r\n \"miscValue26\": \"petInfo\",\r\n \"miscValue27\": \"serviceOrderNumber\",\r\n \"miscValue28\": \"serviceOrderType\",\r\n \"miscValue29\": \"clientInstanceID\",\r\n \"miscValue30\": \"employeeAssignmentProId\",\r\n \"miscValue31\": \"assignmentProId\",\r\n \"miscValue32\": \"dependentAssignmentProId\",\r\n \"miscValue33\": \"assignCoordinatorName\",\r\n \"miscValue34\": \"assigncoordinator@testmail.com\",\r\n \"miscValue35\": \"assignCoordinatorPhone\",\r\n \"miscValue36\": \"2020-10-19T00:00:00\",\r\n \"miscValue37\": \"He/Him/His\",\r\n \"miscValue38\": \"2000-10-20T00:00:00\",\r\n \"miscValue39\": \"USD\",\r\n \"miscValue40\": \"eePassportNumber\",\r\n \"miscValue41\": \"N\",\r\n \"miscValue42\": \"2019-10-20T00:00:00\",\r\n \"miscValue43\": \"2019-10-21T00:00:00\",\r\n \"miscValue44\": \"2019-10-22T00:00:00\",\r\n \"miscValue45\": \"2019-10-23T00:00:00\",\r\n \"miscValue46\": \"dependentFirstName\",\r\n \"miscValue47\": \"dependentLastName\",\r\n \"miscValue48\": \"US\",\r\n \"dependentInfo1\": \"6191|6192|Aman|Gupta|CHLD|IN|1991-04-26|M|ASSGN_STATUS|K223654|2000-04-22|02-12-2020|IN\",\r\n \"dependentInfo2\": \"6193|6194|Gaurav|Singhal|CHLD|IN|1995-05-21|M|ASSGN_STATUS|K223654|2000-05-22|03-12-2020|IN\",\r\n \"partnerReferenceId\": \"221143\",\r\n \"partnerConfigId\": \"442611\"\r\n}\r\n  ],\r\n  \"asyncCallToTransformServiceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corptesvl204.corp.aires.com:5005/fileparse-api/parse/json/async/list",
+					"protocol": "http",
+					"host": [
+						"corptesvl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "5005",
+					"path": [
+						"fileparse-api",
+						"parse",
+						"json",
+						"async",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apitest.aires.com/airesapi/equifax/employeeInitiation/1.0.0?employeeId=E05000690",
+					"protocol": "https",
+					"host": [
+						"apitest",
+						"aires",
+						"com"
+					],
+					"path": [
+						"airesapi",
+						"equifax",
+						"employeeInitiation",
+						"1.0.0"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "E05000690"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
