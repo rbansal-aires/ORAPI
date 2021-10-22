@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "1539c4d4-7ea4-4131-a3f0-05e4d6dccebc",
+		"name": "OR-1245",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonParseServiceRequestObjectList\": [{\r\n        \"authFormConfigId\": \"10\",\r\n        \"businessUnit\": \"Health\",\r\n        \"clientConfigId\": \"9\",\r\n        \"clientId\": \"97338\",\r\n        \"comments\": \"nothing\",\r\n        \"costCenter\": \"Finance FP&A\",\r\n        \"department\": \"Finance\",\r\n        \"destCity\": \"Salt Lake City\",\r\n        \"destCountry\": \"US\",\r\n        \"employeeId\": \"911222\",\r\n        \"firstName\": \"\",\r\n        \"jobTitle\": \"Finance Analyst- FP&A\",\r\n        \"lastName\": \"Handl@ingTwelve\",\r\n        \"miscValue1\": \"RB Corp - Health - AMET - GBP\",\r\n        \"miscValue10\": \"A\",\r\n        \"miscValue11\": \"Single\",\r\n        \"miscValue12\": \"CA\",\r\n        \"miscValue13\": \"USA, Salt Lake City, Utah\",\r\n        \"miscValue14\": \"PERM\",\r\n        \"miscValue16\": \"Deloitte\",\r\n        \"miscValue2\": \"No\",\r\n        \"miscValue3\": \"North America\",\r\n        \"miscValue38\": \"1992-12-23\",\r\n        \"miscValue39\": \"SGD\",\r\n        \"miscValue4\": \"Yes\",\r\n        \"miscValue42\": \"2021-08-16\",\r\n        \"miscValue43\": \"711120\",\r\n        \"miscValue5\": \"RB Health Manufacturing US LLC (US43)\",\r\n        \"miscValue6\": \".com\",\r\n        \"miscValue7\": \"TMS\",\r\n        \"miscValue17\": \"Y\",\r\n        \"miscValue8\": \"0\",\r\n        \"miscValue9\": \"Singapore, Singapore\",\r\n        \"originCountry\": \"SG\",\r\n        \"relocationPolicy\": \"IA Expat-RB GBP\",\r\n        \"salary\": \"17500\",\r\n        \"transfereeType\": \"TRANSFER\",\r\n        \"workEmail\": \"air@yopmail.com\"\r\n    }],\r\n    \"asyncCallToTransformServiceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/fileparse-api/parse/json/async/list",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"fileparse-api",
+						"parse",
+						"json",
+						"async",
+						"list"
+					]
+				},
+				"description": "Test Execution\r\n- First set your email in following table.\r\n\r\nselect * from EMAILDBA.NOTIFY_EMAIL_CONFIG where company_id=97338\r\n\r\n- Then execute the API request.\r\n- An email will be received which contains the failed initiation and reason of failure as 'Required Field is missing -Authorization Rejected'."
+			},
+			"response": []
+		},
+		{
+			"name": "TC2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonParseServiceRequestObjectList\": [{\r\n        \"authFormConfigId\": \"10\",\r\n        \"businessUnit\": \"Health\",\r\n        \"clientConfigId\": \"9\",\r\n        \"clientId\": \"97338\",\r\n        \"comments\": \"nothing\",\r\n        \"costCenter\": \"Finance FP&A\",\r\n        \"department\": \"Finance\",\r\n        \"destCity\": \"Salt Lake City\",\r\n        \"destCountry\": \"US\",\r\n        \"employeeId\": \"911222\",\r\n        \"firstName\": \"TestOne\",\r\n        \"jobTitle\": \"Finance Analyst- FP&A\",\r\n        \"lastName\": \"Handl#ingTwelve\",\r\n        \"miscValue1\": \"RB Corp - Health - AMET - GBP\",\r\n        \"miscValue10\": \"A\",\r\n        \"miscValue11\": \"Single\",\r\n        \"miscValue12\": \"CA\",\r\n        \"miscValue13\": \"USA, Salt Lake City, Utah\",\r\n        \"miscValue14\": \"PERM\",\r\n        \"miscValue16\": \"Deloitte\",\r\n        \"miscValue2\": \"No\",\r\n        \"miscValue3\": \"North America\",\r\n        \"miscValue38\": \"1992-12-23\",\r\n        \"miscValue39\": \"SGD\",\r\n        \"miscValue4\": \"Yes\",\r\n        \"miscValue42\": \"2021-08-16\",\r\n        \"miscValue43\": \"711120\",\r\n        \"miscValue5\": \"RB Health Manufacturing US LLC (US43)\",\r\n        \"miscValue6\": \".com\",\r\n        \"miscValue7\": \"TMS\",\r\n        \"miscValue17\": \"Y\",\r\n        \"miscValue8\": \"0\",\r\n        \"miscValue9\": \"Singapore, Singapore\",\r\n        \"originCountry\": \"SG\",\r\n        \"relocationPolicy\": \"IA Expat-RB GBP\",\r\n        \"salary\": \"17500\",\r\n        \"transfereeType\": \"TRANSFER\",\r\n        \"workEmail\": \"air@yopmail.com\"\r\n    }],\r\n    \"asyncCallToTransformServiceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/fileparse-api/parse/json/async/list",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"fileparse-api",
+						"parse",
+						"json",
+						"async",
+						"list"
+					]
+				},
+				"description": "Test Execution\r\n- First set your email in following table.\r\n\r\nselect * from EMAILDBA.NOTIFY_EMAIL_CONFIG where company_id=97338\r\n\r\n- Then execute the API request.\r\n- An email will be received which contains the failed initiation and reason of failure as 'Special Characters not Accepted -Authorization Rejected'."
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonParseServiceRequestObjectList\": [{\r\n        \"authFormConfigId\": \"10\",\r\n        \"businessUnit\": \"Health\",\r\n        \"clientConfigId\": \"9\",\r\n        \"clientId\": \"97338\",\r\n        \"comments\": \"nothing\",\r\n        \"costCenter\": \"Finance FP&A\",\r\n        \"department\": \"Finance\",\r\n        \"destCity\": \"Salt Lake City\",\r\n        \"destCountry\": \"US\",\r\n        \"employeeId\": \"911222\",\r\n        \"firstName\": \"TestOne\",\r\n        \"jobTitle\": \"Finance Analyst- FP&A\",\r\n        \"lastName\": \"HandlingTwelve\",\r\n        \"miscValue1\": \"RB Corp - Health - AMET - GBP\",\r\n        \"miscValue10\": \"A\",\r\n        \"miscValue11\": \"Single\",\r\n        \"miscValue12\": \"CA\",\r\n        \"miscValue13\": \"USA, Salt Lake City, Utah\",\r\n        \"miscValue14\": \"PERM\",\r\n        \"miscValue16\": \"Deloitte\",\r\n        \"miscValue2\": \"No\",\r\n        \"miscValue3\": \"North America\",\r\n        \"miscValue38\": \"1992-12-23\",\r\n        \"miscValue39\": \"SGD\",\r\n        \"miscValue4\": \"Yes\",\r\n        \"miscValue42\": \"2021-08-16\",\r\n        \"miscValue43\": \"711120\",\r\n        \"miscValue5\": \"RB Health Manufacturing US LLC (US43)\",\r\n        \"miscValue6\": \".com\",\r\n        \"miscValue7\": \"TMS\",\r\n        \"miscValue17\": \"Y\",\r\n        \"miscValue8\": \"0\",\r\n        \"miscValue9\": \"Singapore, Singapore\",\r\n        \"originCountry\": \"SG\",\r\n        \"relocationPolicy\": \"Test Policy\",\r\n        \"salary\": \"17500\",\r\n        \"transfereeType\": \"TRANSFER\",\r\n        \"workEmail\": \"air@yopmail.com\"\r\n    }],\r\n    \"asyncCallToTransformServiceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/fileparse-api/parse/json/async/list",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"fileparse-api",
+						"parse",
+						"json",
+						"async",
+						"list"
+					]
+				},
+				"description": "Test Execution\r\n- First set your email in following table.\r\n\r\nselect * from EMAILDBA.NOTIFY_EMAIL_CONFIG where company_id=97338\r\n\r\n- Then set the DROP_DOWN_ERROR_IND='Y' in EMPINITDBA.AUTH_FORM_CONFIG table. Pass \"relocationPolicy\": \"Test Policy\" in the json.\r\n\r\nupdate EMPINITDBA.AUTH_FORM_CONFIG set DROP_DOWN_ERROR_IND='Y' where AUTH_FORM_CONFIG_ID=10\r\n\r\n- Then execute the API request.\r\n- An email will be received which contains the failed initiation and reason of failure as 'List value does not exist -Authorization Rejected'."
+			},
+			"response": []
+		},
+		{
+			"name": "TC4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonParseServiceRequestObjectList\": [{\r\n        \"authFormConfigId\": \"10\",\r\n        \"businessUnit\": \"Health\",\r\n        \"clientConfigId\": \"9\",\r\n        \"clientId\": \"97338\",\r\n        \"comments\": \"nothing\",\r\n        \"costCenter\": \"Finance FP&A\",\r\n        \"department\": \"Finance\",\r\n        \"destCity\": \"Salt Lake City\",\r\n        \"destCountry\": \"US\",\r\n        \"employeeId\": \"911222\",\r\n        \"firstName\": \"Test#Two\",\r\n        \"jobTitle\": \"Finance Analyst- FP&A\",\r\n        \"lastName\": \"HandlingTwelve\",\r\n        \"miscValue1\": \"RB Corp - Health - AMET - GBP\",\r\n        \"miscValue10\": \"A\",\r\n        \"miscValue11\": \"Single\",\r\n        \"miscValue12\": \"CA\",\r\n        \"miscValue13\": \"USA, Salt Lake City, Utah\",\r\n        \"miscValue14\": \"PERM\",\r\n        \"miscValue16\": \"Deloitte\",\r\n        \"miscValue2\": \"No\",\r\n        \"miscValue3\": \"North America\",\r\n        \"miscValue38\": \"1992-12-23\",\r\n        \"miscValue39\": \"SGD\",\r\n        \"miscValue4\": \"Yes\",\r\n        \"miscValue42\": \"2021-08-16\",\r\n        \"miscValue43\": \"711120\",\r\n        \"miscValue5\": \"RB Health Manufacturing US LLC (US43)\",\r\n        \"miscValue6\": \".com\",\r\n        \"miscValue7\": \"TMS\",\r\n        \"miscValue17\": \"Y\",\r\n        \"miscValue8\": \"0\",\r\n        \"miscValue9\": \"Singapore, Singapore\",\r\n        \"originCountry\": \"SG\",\r\n        \"relocationPolicy\": \"Test Policy\",\r\n        \"salary\": \"17500\",\r\n        \"transfereeType\": \"TRANSFER\",\r\n        \"workEmail\": \"air@yopmail.com\"\r\n    }],\r\n    \"asyncCallToTransformServiceInd\": \"Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/fileparse-api/parse/json/async/list",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"fileparse-api",
+						"parse",
+						"json",
+						"async",
+						"list"
+					]
+				},
+				"description": "Test Execution\r\n- First set your email in following table.\r\n\r\nselect * from EMAILDBA.NOTIFY_EMAIL_CONFIG where company_id=97338\r\n\r\n- Then set the DROP_DOWN_ERROR_IND='N' in EMPINITDBA.AUTH_FORM_CONFIG table.\r\n\r\nupdate EMPINITDBA.AUTH_FORM_CONFIG set DROP_DOWN_ERROR_IND='N' where AUTH_FORM_CONFIG_ID=10\r\n\r\n- Then execute the API request.\r\n- An email will be received which contains the failed initiation and reason of failure as 'List value does not exist -Authorization Accepted'."
+			},
+			"response": []
+		}
+	]
+}
