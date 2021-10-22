@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "1e90dc41-ff4d-4470-95d4-be70a984228e",
+		"name": "OR-1411",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyId\": 492112222,\r\n  \"configId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/filebatch-api/batch/process",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"filebatch-api",
+						"batch",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyId\": null,\r\n  \"configId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/filebatch-api/batch/process",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"filebatch-api",
+						"batch",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyId\": 60915,\r\n  \"configId\": 16\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/filebatch-api/batch/process",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"filebatch-api",
+						"batch",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyId\": 60915,\r\n  \"configId\": 16\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/filebatch-api/batch/process",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"filebatch-api",
+						"batch",
+						"process"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
