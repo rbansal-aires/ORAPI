@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "f41bca40-f67f-4593-bdfd-4fdc1f0fb69d",
+		"name": "OR-1372",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TC1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/search?employeeId=1065434",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "1065434"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/search?employeeId=1021342111",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "1021342111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/search?firstName=Paul&lastName=Killian",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Paul"
+						},
+						{
+							"key": "lastName",
+							"value": "Killian"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/search?firstName=Paulwwee&lastName=Killianeeeee",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Paulwwee"
+						},
+						{
+							"key": "lastName",
+							"value": "Killianeeeee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/search?emailId=Kevin.Pieters@bsci.com&=",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "emailId",
+							"value": "Kevin.Pieters@bsci.com"
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200. This is Correct.\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://corpqavl204.corp.aires.com:8005/bscinitiation-api/bsc-initiation/search?emailId=Kevin.PietersIncorrect@bsci.com",
+					"protocol": "http",
+					"host": [
+						"corpqavl204",
+						"corp",
+						"aires",
+						"com"
+					],
+					"port": "8005",
+					"path": [
+						"bscinitiation-api",
+						"bsc-initiation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "emailId",
+							"value": "Kevin.PietersIncorrect@bsci.com"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
